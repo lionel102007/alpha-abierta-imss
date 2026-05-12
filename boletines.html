@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Boletines</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- BANNER -->
+<div class="banner">
+  <img src="img/banner.jpg">
+</div>
+
+<!-- MENU -->
+<div id="menu-container"></div>
+
+<!-- HEADER -->
+<section class="header-verde">
+  <h1>Boletines</h1>
+  <p>Consulta boletines informativos y documentos institucionales.</p>
+</section>
+
+<!-- CONTENEDOR -->
+<section class="boletines-container">
+
+  <div class="boletines-grid" id="contenedor-boletines">
+    <!-- SE LLENA CON JSON -->
+  </div>
+
+</section>
+
+<!-- BOTÓN -->
+<div style="margin:30px; text-align:center;">
+  <a href="index1.html" class="boton">← Regresar</a>
+</div>
+
+<footer>
+  <p>© 2026 IMSS</p>
+</footer>
+
+<script src="js/menu.js"></script>
+
+<script>
+fetch('./datos/boletines.json')
+.then(response => response.json())
+.then(data => {
+
+  const contenedor = document.getElementById("contenedor-boletines");
+
+  data.boletines.forEach(boletin => {
+
+    contenedor.innerHTML += `
+      <div class="boletin-card">
+
+        <img src="${boletin.imagen}" alt="${boletin.titulo}">
+
+        <div style="padding:15px;">
+
+          <h2>${boletin.titulo}</h2>
+
+          <p>${boletin.fecha}</p>
+
+          <p>${boletin.descripcion}</p>
+
+          <a href="${boletin.pdf}" target="_blank" class="boton">
+            Ver PDF
+          </a>
+
+        </div>
+
+      </div>
+    `;
+
+  });
+
+})
+.catch(error => console.log(error));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Afrontamiento Emocional</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- BANNER -->
+  <div class="banner">
+    <img src="img/banner.jpg">
+  </div>
+
+  <!-- HAMBURGUESA -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <!-- MENÚ COMPLETO IGUAL -->
+  <nav class="menu" id="menu">
+    <a href="index1.html">Inicio</a>
+    <a href="afrontamiento.html">Afrontamiento Emocional</a>
+    <a href="dpsp1.html">DPSP</a>
+    <a href="#">CursoVirtualIAPF</a>
+    <a href="#">SICAVI</a>
+    <a href="#">Integridad</a>
+    <a href="#">Código de Conducta</a>
+    <a href="#">ECCO</a>
+    <a href="#">SED-Evaluación</a>
+    <a href="#">Instructores</a>
+
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown()">Más ▼</button>
+      <div class="dropdown-content" id="dropdown">
+        <a href="#">Catálogo de cursos</a>
+        <a href="#">Guías de Inducción</a>
+        <a href="#">Servicio Social</a>
+        <a href="boletines.html">Boletines</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO -->
+  <section class="inicio">
+    <h1>Afrontamiento Emocional</h1>
+    <p>Salud mental y cursos disponibles.</p>
+
+    <!-- BOTÓN REGRESAR -->
+    <a href="index1.html" class="boton">← Regresar al inicio</a>
+  </section>
+
+  <!-- IMAGEN -->
+  <section class="destacado">
+    <img src="img/saludmental.jpg">
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Instituto Mexicano del Seguro Social</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("activo");
+    }
+
+    function toggleDropdown() {
+      document.getElementById("dropdown").classList.toggle("mostrar");
+    }
+  </script>
+
+</body>
+</html>
