@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
   <nav class="menu" id="menu">
-    <a href="index1.html">Inicio</a>
+    <a href="index.html">Inicio</a>
     <a href="afrontamiento.html">Afrontamiento Emocional</a>
     <a href="dpsp1.html">DPSP</a>
     <a href="cursoVirtual.html">Curso Virtual</a>
