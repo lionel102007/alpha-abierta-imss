@@ -1,0 +1,37 @@
+{
+  "instrucciones": "NO BORRAR COMAS NI LLAVES. SOLO CAMBIAR TEXTOS ENTRE COMILLAS.",
+
+  "titulo": "Instructores",
+
+  "descripcion": "En esta sección encontrarás información relacionada con el proceso para convertirse en instructor institucional.",
+
+  "apartados": [
+
+    {
+      "titulo": "¿Qué es un instructor?",
+      "contenido": "Un instructor es la persona encargada de impartir cursos y compartir conocimientos dentro de la institución."
+    },
+
+    {
+      "titulo": "Requisitos",
+      "contenido": "Contar con experiencia, habilidades de comunicación y disposición para capacitar al personal."
+    },
+
+    {
+      "titulo": "Capacitación",
+      "contenido": "Los instructores reciben formación y actualización continua para mejorar sus capacidades."
+    },
+
+    {
+      "titulo": "Funciones",
+      "contenido": "Impartir cursos, evaluar actividades y apoyar el aprendizaje institucional."
+    }
+
+  ],
+
+  "imagenes": [
+    "img/instructor1.jpg",
+    "img/instructor2.jpg",
+    "img/instructor3.jpg"
+  ]
+}

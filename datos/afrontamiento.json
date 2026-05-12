@@ -1,0 +1,14 @@
+[
+  {
+    "titulo": "Manejo del Estrés",
+    "fecha": "Abril 2026",
+    "descripcion": "Curso para aprender técnicas de control del estrés.",
+    "imagen": "img/curso1.jpg"
+  },
+  {
+    "titulo": "Salud Mental en el Trabajo",
+    "fecha": "Mayo 2026",
+    "descripcion": "Estrategias para mejorar el bienestar laboral.",
+    "imagen": "img/curso2.jpg"
+  }
+]

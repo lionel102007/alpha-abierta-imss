@@ -1,0 +1,25 @@
+{
+  "programas": [
+    {
+      "nivel": "Secundaria",
+      "institucion": "INEA",
+      "descripcion": "Concluye tu secundaria de forma gratuita.",
+      "imagen": "img/secundaria.jpg",
+      "link": "https://www.gob.mx/inea"
+    },
+    {
+      "nivel": "Preparatoria",
+      "institucion": "Prepa en Línea SEP",
+      "descripcion": "Estudia tu bachillerato en línea.",
+      "imagen": "img/prepa.jpg",
+      "link": "https://www.prepaenlinea.sep.gob.mx/"
+    },
+    {
+      "nivel": "Licenciatura",
+      "institucion": "UNADM",
+      "descripcion": "Carreras universitarias en línea.",
+      "imagen": "img/universidad.jpg",
+      "link": "https://www.unadmexico.mx/"
+    }
+  ]
+}

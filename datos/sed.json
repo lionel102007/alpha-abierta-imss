@@ -1,0 +1,28 @@
+{
+  "instrucciones": "NO BORRAR COMAS NI LLAVES. SOLO CAMBIAR TEXTOS ENTRE COMILLAS.",
+
+  "titulo": "SED - Evaluación",
+
+  "descripcion": "El Sistema de Evaluación del Desempeño permite consultar información, procesos y materiales relacionados con la evaluación institucional.",
+
+  "informacion": "En esta sección podrás consultar guías, documentos y materiales de apoyo relacionados con el sistema SED.",
+
+  "imagenes": [
+    "img/sed1.jpg",
+    "img/sed2.jpg"
+  ],
+
+  "guias": [
+
+    {
+      "titulo": "Guía de Evaluación",
+      "pdf": "docs/sed1.pdf"
+    },
+
+    {
+      "titulo": "Manual del Sistema",
+      "pdf": "docs/sed2.pdf"
+    }
+
+  ]
+}

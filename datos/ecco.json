@@ -1,0 +1,18 @@
+{
+  "instrucciones": "NO BORRAR COMAS NI LLAVES. SOLO CAMBIAR TEXTOS ENTRE COMILLAS.",
+
+  "titulo": "ECCO",
+
+  "descripcion": "ECCO es una estrategia enfocada en fortalecer la capacitación, actualización y mejora continua dentro del IMSS.",
+
+  "objetivos": "Promover la participación en cursos y actividades formativas para mejorar las habilidades del personal.",
+
+  "historia": "ECCO ha impulsado distintos programas de formación y actualización institucional a lo largo de los años.",
+
+  "banner": "img/ecco-banner.jpg",
+
+  "imagenes": [
+    "img/ecco1.jpg",
+    "img/ecco2.jpg"
+  ]
+}

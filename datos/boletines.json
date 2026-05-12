@@ -1,0 +1,23 @@
+{
+  "instrucciones": "NO BORRAR COMAS NI LLAVES. SOLO CAMBIAR TEXTOS ENTRE COMILLAS.",
+
+  "boletines": [
+
+    {
+      "titulo": "Boletín Enero",
+      "fecha": "Enero 2026",
+      "descripcion": "Información institucional y actividades recientes.",
+      "imagen": "img/boletin1.jpg",
+      "pdf": "docs/boletin1.pdf"
+    },
+
+    {
+      "titulo": "Boletín Febrero",
+      "fecha": "Febrero 2026",
+      "descripcion": "Nuevas actualizaciones y programas institucionales.",
+      "imagen": "img/boletin2.jpg",
+      "pdf": "docs/boletin2.pdf"
+    }
+
+  ]
+}

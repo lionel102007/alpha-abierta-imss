@@ -1,0 +1,24 @@
+{
+  "sicavi": {
+    "url": "https://sicavi.imss.gob.mx",
+    "texto": "Entra al sitio | SICAVI"
+  },
+  "admin": {
+    "url": "https://link-admin.com",
+    "texto": "Constancia Administración Pública"
+  },
+  "etica": {
+    "url": "https://link-etica.com",
+    "texto": "Constancia Ética e Integridad"
+  },
+  "sicavisp": {
+    "url": "https://sicavisp.gob.mx",
+    "texto": "https://sicavisp.gob.mx",
+    "boton": "Ir a SICAVISP"
+  },
+  "aprende": {
+    "url": "https://aprende.mx",
+    "texto": "https://aprende.mx",
+    "boton": "Ir a AprendeMX"
+  }
+}

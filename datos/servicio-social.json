@@ -1,0 +1,36 @@
+{
+  "instrucciones": "NO BORRAR COMAS NI LLAVES. SOLO CAMBIAR TEXTOS ENTRE COMILLAS.",
+
+  "titulo": "Servicio Social",
+
+  "descripcion": "El servicio social permite a estudiantes aplicar sus conocimientos y adquirir experiencia profesional dentro de la institución.",
+
+  "informacion": "El IMSS ofrece espacios para que alumnos participen en distintas áreas y apoyen en actividades institucionales.",
+
+  "requisitos": [
+    "Ser estudiante activo",
+    "Contar con carta de presentación",
+    "Identificación oficial",
+    "Cumplir con las horas requeridas"
+  ],
+
+  "imagenes": [
+    "img/servicio1.jpg",
+    "img/servicio2.jpg",
+    "img/servicio3.jpg"
+  ],
+
+  "documentos": [
+
+    {
+      "titulo": "Guía de Servicio Social",
+      "pdf": "docs/servicio1.pdf"
+    },
+
+    {
+      "titulo": "Requisitos Completos",
+      "pdf": "docs/servicio2.pdf"
+    }
+
+  ]
+}

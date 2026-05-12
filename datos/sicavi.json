@@ -1,0 +1,34 @@
+{
+  "instrucciones": "NO BORRAR COMAS NI LLAVES. SOLO CAMBIAR TEXTOS ENTRE COMILLAS.",
+
+  "titulo": "SICAVI",
+
+  "descripcion": "Sistema de Capacitación Virtual donde los trabajadores pueden acceder a cursos, plataformas y herramientas institucionales.",
+
+  "imagenes": [
+    "img/sicavi1.jpg",
+    "img/sicavi2.jpg"
+  ],
+
+  "plataformas": [
+
+    {
+      "nombre": "Plataforma de Cursos",
+      "descripcion": "Accede a cursos y capacitaciones institucionales.",
+      "link": "#"
+    },
+
+    {
+      "nombre": "Material Educativo",
+      "descripcion": "Consulta documentos y recursos de aprendizaje.",
+      "link": "#"
+    },
+
+    {
+      "nombre": "Evaluaciones",
+      "descripcion": "Realiza actividades y evaluaciones en línea.",
+      "link": "#"
+    }
+
+  ]
+}
