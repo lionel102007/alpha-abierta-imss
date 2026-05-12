@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SED - Evaluación</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- BANNER -->
+<div class="banner">
+  <img src="img/banner.jpg">
+</div>
+
+<!-- MENU -->
+<div id="menu-container"></div>
+
+<!-- HEADER -->
+<section class="header-verde">
+
+  <h1 id="titulo-sed"></h1>
+
+</section>
+
+<!-- CONTENIDO -->
+<section class="contenido-sed">
+
+  <p id="descripcion-sed"></p>
+
+  <br>
+
+  <p id="informacion-sed"></p>
+
+  <!-- IMAGENES -->
+  <div class="contenedor-imagenes" id="imagenes-sed">
+  </div>
+
+</section>
+
+<!-- GUIAS -->
+<section class="documentos">
+
+  <h2>Guías y Documentos</h2>
+
+  <div class="contenedor-docs" id="guias-sed">
+  </div>
+
+</section>
+
+<!-- BOTON -->
+<div style="margin:30px; text-align:center;">
+  <a href="index1.html" class="boton">← Regresar</a>
+</div>
+
+<footer>
+  <p>© 2026 IMSS</p>
+</footer>
+
+<script src="js/menu.js"></script>
+
+<script>
+
+fetch('./datos/sed.json')
+
+.then(response => response.json())
+
+.then(data => {
+
+  /* TITULO */
+  document.getElementById("titulo-sed")
+    .textContent = data.titulo;
+
+  /* DESCRIPCION */
+  document.getElementById("descripcion-sed")
+    .textContent = data.descripcion;
+
+  /* INFORMACION */
+  document.getElementById("informacion-sed")
+    .textContent = data.informacion;
+
+  /* IMAGENES */
+  const imagenes = document.getElementById("imagenes-sed");
+
+  data.imagenes.forEach(img => {
+
+    imagenes.innerHTML += `
+      <img src="${img}">
+    `;
+
+  });
+
+  /* GUIAS */
+  const guias = document.getElementById("guias-sed");
+
+  data.guias.forEach(guia => {
+
+    guias.innerHTML += `
+
+      <a href="${guia.pdf}" target="_blank" class="doc">
+        📄 ${guia.titulo}
+      </a>
+
+    `;
+
+  });
+
+})
+
+.catch(error => console.log(error));
+
+</script>
+
+</body>
+</html>

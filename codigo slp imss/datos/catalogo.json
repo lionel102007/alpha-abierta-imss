@@ -1,0 +1,39 @@
+{
+  "instrucciones": "NO BORRAR COMAS NI LLAVES. SOLO CAMBIAR TEXTOS ENTRE COMILLAS.",
+
+  "titulo": "Catálogo de Cursos",
+
+  "descripcion": "Consulta los cursos disponibles y accede a la información correspondiente mediante los documentos PDF.",
+
+  "cursos": [
+
+    {
+      "nombre": "Curso de Liderazgo",
+      "descripcion": "Curso enfocado en habilidades de liderazgo y trabajo en equipo.",
+      "pdf": "docs/curso1.pdf",
+      "color": "#2ecc71"
+    },
+
+    {
+      "nombre": "Curso de Comunicación",
+      "descripcion": "Mejora tus habilidades de comunicación institucional.",
+      "pdf": "docs/curso2.pdf",
+      "color": "#3498db"
+    },
+
+    {
+      "nombre": "Curso de Ética",
+      "descripcion": "Fortalece los principios éticos y profesionales.",
+      "pdf": "docs/curso3.pdf",
+      "color": "#e67e22"
+    },
+
+    {
+      "nombre": "Curso de Capacitación",
+      "descripcion": "Aprende herramientas y procesos institucionales.",
+      "pdf": "docs/curso4.pdf",
+      "color": "#9b59b6"
+    }
+
+  ]
+}

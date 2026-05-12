@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SICAVI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- BANNER -->
+<div class="banner">
+  <img src="img/banner.jpg">
+</div>
+
+<!-- MENU -->
+<div id="menu-container"></div>
+
+<!-- CONTENIDO -->
+<section class="contenido-sicavi">
+
+  <h1 id="titulo-sicavi"></h1>
+
+  <p id="descripcion-sicavi"></p>
+
+  <!-- IMÁGENES -->
+  <div class="contenedor-imagenes" id="imagenes-sicavi">
+  </div>
+
+  <!-- PLATAFORMAS -->
+  <div class="plataformas" id="plataformas-sicavi">
+  </div>
+
+</section>
+
+<div style="margin:30px; text-align:center;">
+  <a href="index1.html" class="boton">← Regresar</a>
+</div>
+
+<footer>
+  <p>© 2026 IMSS</p>
+</footer>
+
+<script src="js/menu.js"></script>
+
+<script>
+
+fetch('./datos/sicavi.json')
+
+.then(response => response.json())
+
+.then(data => {
+
+  /* TITULO */
+  document.getElementById("titulo-sicavi")
+    .textContent = data.titulo;
+
+  /* DESCRIPCION */
+  document.getElementById("descripcion-sicavi")
+    .textContent = data.descripcion;
+
+  /* IMAGENES */
+  const imagenes = document.getElementById("imagenes-sicavi");
+
+  data.imagenes.forEach(img => {
+
+    imagenes.innerHTML += `
+      <img src="${img}">
+    `;
+
+  });
+
+  /* PLATAFORMAS */
+  const plataformas = document.getElementById("plataformas-sicavi");
+
+  data.plataformas.forEach(plataforma => {
+
+    plataformas.innerHTML += `
+
+      <div class="plataforma">
+
+        <h2>${plataforma.nombre}</h2>
+
+        <p>${plataforma.descripcion}</p>
+
+        <a href="${plataforma.link}" class="boton">
+          Entrar
+        </a>
+
+      </div>
+
+    `;
+
+  });
+
+})
+
+.catch(error => console.log(error));
+
+</script>
+
+</body>
+</html>

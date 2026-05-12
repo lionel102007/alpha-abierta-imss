@@ -1,0 +1,18 @@
+{
+  "instrucciones": "NO BORRAR COMAS NI LLAVES. SOLO CAMBIAR TEXTOS ENTRE COMILLAS.",
+
+  "titulo": "Integridad",
+
+  "subtitulo": "Cultura de Integridad",
+
+  "descripcion": "El IMSS promueve acciones enfocadas en fortalecer la honestidad, transparencia y responsabilidad institucional.",
+
+  "objetivos": "Fomentar conductas éticas dentro de la institución y promover el respeto entre trabajadores y ciudadanos.",
+
+  "importancia": "La integridad fortalece la confianza pública y mejora el ambiente laboral.",
+
+  "imagenes": [
+    "img/integridad1.jpg",
+    "img/integridad2.jpg"
+  ]
+}

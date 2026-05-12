@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Instructores</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- BANNER -->
+<div class="banner">
+  <img src="img/banner.jpg">
+</div>
+
+<!-- MENU -->
+<div id="menu-container"></div>
+
+<!-- HEADER -->
+<section class="header-instructores">
+
+  <h1 id="titulo-instructores"></h1>
+
+  <p id="descripcion-instructores"></p>
+
+</section>
+
+<!-- ACORDEON -->
+<section class="acordeon-container" id="acordeon-container">
+</section>
+
+<!-- SLIDER -->
+<section class="slider">
+
+  <h2>Galería</h2>
+
+  <div class="slider-track" id="slider-track">
+  </div>
+
+</section>
+
+<!-- BOTON -->
+<div style="margin:30px; text-align:center;">
+  <a href="index1.html" class="boton">← Regresar</a>
+</div>
+
+<footer>
+  <p>© 2026 IMSS</p>
+</footer>
+
+<script src="js/menu.js"></script>
+
+<script>
+
+fetch('./datos/instructores.json')
+
+.then(response => response.json())
+
+.then(data => {
+
+  /* TITULO */
+  document.getElementById("titulo-instructores")
+    .textContent = data.titulo;
+
+  /* DESCRIPCION */
+  document.getElementById("descripcion-instructores")
+    .textContent = data.descripcion;
+
+  /* ACORDEON */
+  const acordeon = document.getElementById("acordeon-container");
+
+  data.apartados.forEach((apartado, index) => {
+
+    acordeon.innerHTML += `
+
+      <div class="acordeon">
+
+        <button class="acordeon-btn">
+
+          ${apartado.titulo}
+
+          <span class="flecha">▼</span>
+
+        </button>
+
+        <div class="acordeon-contenido">
+
+          <p>${apartado.contenido}</p>
+
+        </div>
+
+      </div>
+
+    `;
+
+  });
+
+  /* FUNCION ACORDEON */
+  const botones = document.querySelectorAll(".acordeon-btn");
+
+  botones.forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+      btn.classList.toggle("activo");
+
+      const contenido = btn.nextElementSibling;
+
+      if(contenido.style.maxHeight){
+
+        contenido.style.maxHeight = null;
+
+      } else {
+
+        contenido.style.maxHeight =
+          contenido.scrollHeight + "px";
+
+      }
+
+    });
+
+  });
+
+  /* SLIDER */
+  const slider = document.getElementById("slider-track");
+
+  data.imagenes.forEach(img => {
+
+    slider.innerHTML += `
+      <img src="${img}">
+    `;
+
+  });
+
+})
+
+.catch(error => console.log(error));
+
+</script>
+
+</body>
+</html>
