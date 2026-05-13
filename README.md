@@ -42,6 +42,50 @@ Sitio web institucional desarrollado para mostrar información relacionada con c
 * Boletines
 
 ---
+# Advertencia importante
+
+Para evitar errores en el funcionamiento del sitio, únicamente deben modificarse los archivos ubicados dentro de la carpeta:
+
+```plaintext id="u7m2x4"
+/datos
+```
+
+y únicamente los archivos con terminación:
+
+```plaintext id="m8p4x2"
+.json
+```
+
+---
+
+# No modificar
+
+Se recomienda NO modificar ni eliminar:
+
+```plaintext id="p5n1x7"
+/css
+/js
+/img
+/docs
+```
+
+Tampoco modificar archivos como:
+
+```plaintext id="r8m2x4"
+index.html
+estilos.css
+menu.js
+```
+
+ya que estos archivos controlan:
+
+* diseño del sitio
+* funcionamiento del menú
+* estructura de páginas
+* carga de información
+
+Modificar estos archivos incorrectamente puede provocar errores visuales o fallos en el sitio web.
+
 
 # Edición del contenido
 
