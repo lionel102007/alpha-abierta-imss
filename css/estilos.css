@@ -1,3 +1,4 @@
+
 /* RESET */
 * {
   margin: 0;
@@ -153,18 +154,25 @@ body {
 /* ===== CARDS ===== */
 .card {
   background: white;
-  margin: 15px auto;
-  padding: 15px;
-  border-radius: 10px;
-  max-width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  width: 350px;
   text-align: center;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
 }
 
 .card img {
   width: 100%;
-  border-radius: 10px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 /* ===== CONTENEDORES ===== */
@@ -177,6 +185,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
 }
 
 /* ===== PLATAFORMAS ===== */
@@ -468,6 +477,10 @@ footer {
 
   .menu-toggle {
     display: block;
+  }
+
+  .card {
+    width: 90%;
   }
 
 }
