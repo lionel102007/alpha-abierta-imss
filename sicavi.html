@@ -1,19 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SICAVI</title>
+
   <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
 
-  <!-- MENU -->
-  <div class="menu-toggle" onclick="toggleMenu()">☰ Menú</div>
+  <!-- MENU DINAMICO -->
+  <div id="menu-container"></div>
 
-
-  <!-- CONTENIDO -->
+  <!-- CONTENIDO SICAVI -->
   <section class="contenido-sicavi" id="contenido-sicavi">
 
   </section>
@@ -23,7 +23,9 @@
     Plataforma de Capacitación IMSS
   </footer>
 
+  <!-- SCRIPT SICAVI -->
   <script>
+
     fetch("datos/sicavi.json")
       .then(res => res.json())
       .then(data => {
@@ -31,51 +33,75 @@
         let imagenesHTML = "";
 
         data.imagenes.forEach(img => {
+
           imagenesHTML += `
             <img src="${img}" alt="Imagen SICAVI">
           `;
+
         });
 
         let plataformasHTML = "";
 
         data.plataformas.forEach(plataforma => {
+
           plataformasHTML += `
+          
             <div class="card">
+
               <h3>${plataforma.nombre}</h3>
+
               <p>${plataforma.descripcion}</p>
-              <a href="${plataforma.link}" class="boton" target="_blank">
-                Acceder
+
+              <a href="${plataforma.link}" 
+                 class="boton" 
+                 target="_blank">
+
+                 Acceder
+
               </a>
+
             </div>
+
           `;
+
         });
 
         document.getElementById("contenido-sicavi").innerHTML = `
-          
+
           <div class="titulo-sicavi">
+
             <img src="${data.logo}" alt="Logo SICAVI">
+
             <h1>${data.titulo}</h1>
+
           </div>
 
           <p class="descripcion-sicavi">
+
             ${data.descripcion}
+
           </p>
 
           <div class="contenedor-imagenes">
+
             ${imagenesHTML}
+
           </div>
 
           <div class="plataformas">
+
             ${plataformasHTML}
+
           </div>
 
         `;
+
       });
 
-    function toggleMenu() {
-      document.getElementById("menu").classList.toggle("activo");
-    }
   </script>
+
+  <!-- MENU JS -->
+  <script src="js/menu.js"></script>
 
 </body>
 </html>
