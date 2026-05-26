@@ -2,106 +2,103 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <title>ECCO</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SICAVI</title>
-
   <link rel="stylesheet" href="css/estilos.css">
 </head>
-
 <body>
 
-  <!-- MENU DINAMICO -->
-  <div id="menu-container"></div>
+<!-- BANNER -->
+<div class="banner">
+  <img src="img/banner.jpg">
+</div>
 
-  <!-- CONTENIDO SICAVI -->
-  <section class="contenido-sicavi" id="contenido-sicavi">
+<!-- MENU -->
+<div id="menu-container"></div>
 
-  </section>
+<!-- HEADER ECCO -->
+<header class="header-ecco">
 
-  <!-- FOOTER -->
-  <footer>
-    Plataforma de Capacitación IMSS
-  </footer>
+  <img id="banner-ecco" src="">
 
-  <!-- SCRIPT SICAVI -->
-  <script>
+</header>
 
-    fetch("datos/sicavi.json")
-      .then(res => res.json())
-      .then(data => {
+<!-- CONTENIDO -->
+<section class="contenido-ecco">
 
-        let imagenesHTML = "";
+  <h1 id="titulo-ecco"></h1>
 
-        data.imagenes.forEach(img => {
+  <p id="descripcion-ecco"></p>
 
-          imagenesHTML += `
-            <img src="${img}" alt="Imagen SICAVI">
-          `;
+  <!-- IMAGENES -->
+  <div class="contenedor-imagenes" id="imagenes-ecco">
+  </div>
 
-        });
+  <h2>Objetivos</h2>
 
-        let plataformasHTML = "";
+  <p id="objetivos-ecco"></p>
 
-        data.plataformas.forEach(plataforma => {
+  <h2>Historia</h2>
 
-          plataformasHTML += `
-          
-            <div class="card">
+  <p id="historia-ecco"></p>
 
-              <h3>${plataforma.nombre}</h3>
+</section>
 
-              <p>${plataforma.descripcion}</p>
+<!-- BOTON -->
+<div style="margin:30px; text-align:center;">
+  <a href="index.html" class="boton">← Regresar</a>
+</div>
 
-              <a href="${plataforma.link}" 
-                 class="boton" 
-                 target="_blank">
+<footer>
+  <p>© 2026 IMSS</p>
+</footer>
 
-                 Acceder
+<script src="js/menu.js"></script>
 
-              </a>
+<script>
 
-            </div>
+fetch('./datos/ecco.json')
 
-          `;
+.then(response => response.json())
 
-        });
+.then(data => {
 
-        document.getElementById("contenido-sicavi").innerHTML = `
+  /* TITULO */
+  document.getElementById("titulo-ecco")
+    .textContent = data.titulo;
 
-          <div class="titulo-sicavi">
+  /* DESCRIPCION */
+  document.getElementById("descripcion-ecco")
+    .textContent = data.descripcion;
 
-            <img src="${data.logo}" alt="Logo SICAVI">
+  /* OBJETIVOS */
+  document.getElementById("objetivos-ecco")
+    .textContent = data.objetivos;
 
-            <h1>${data.titulo}</h1>
+  /* HISTORIA */
+  document.getElementById("historia-ecco")
+    .textContent = data.historia;
 
-          </div>
+  /* BANNER */
+  document.getElementById("banner-ecco")
+    .src = data.banner;
 
-          <p class="descripcion-sicavi">
+  /* IMAGENES */
+  const imagenes = document.getElementById("imagenes-ecco");
 
-            ${data.descripcion}
+  data.imagenes.forEach(img => {
 
-          </p>
+    imagenes.innerHTML += `
+      <img src="${img}">
+    `;
 
-          <div class="contenedor-imagenes">
+  });
 
-            ${imagenesHTML}
+})
 
-          </div>
+.catch(error => console.log(error));
 
-          <div class="plataformas">
-
-            ${plataformasHTML}
-
-          </div>
-
-        `;
-
-      });
-
-  </script>
-
-  <!-- MENU JS -->
-  <script src="js/menu.js"></script>
+</script>
 
 </body>
 </html>
