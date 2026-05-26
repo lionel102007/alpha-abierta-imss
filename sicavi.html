@@ -1,103 +1,88 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>SICAVI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SICAVI</title>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-<!-- BANNER -->
-<div class="banner">
-  <img src="img/banner.jpg">
-</div>
+  <!-- MENU -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰ Menú</div>
 
-<!-- MENU -->
-<div id="menu-container"></div>
+  <nav class="menu" id="menu">
+    <a href="index.html">Inicio</a>
+    <a href="dpsp.html">DPSP</a>
+    <a href="sicavi.html">SICAVI</a>
+    <a href="conducta.html">Código de Conducta</a>
+    <a href="integridad.html">Integridad</a>
+  </nav>
 
-<!-- CONTENIDO -->
-<section class="contenido-sicavi">
+  <!-- CONTENIDO -->
+  <section class="contenido-sicavi" id="contenido-sicavi">
 
-  <h1 id="titulo-sicavi"></h1>
+  </section>
 
-  <p id="descripcion-sicavi"></p>
+  <!-- FOOTER -->
+  <footer>
+    Plataforma de Capacitación IMSS
+  </footer>
 
-  <!-- IMÁGENES -->
-  <div class="contenedor-imagenes" id="imagenes-sicavi">
-  </div>
+  <script>
+    fetch("datos/sicavi.json")
+      .then(res => res.json())
+      .then(data => {
 
-  <!-- PLATAFORMAS -->
-  <div class="plataformas" id="plataformas-sicavi">
-  </div>
+        let imagenesHTML = "";
 
-</section>
+        data.imagenes.forEach(img => {
+          imagenesHTML += `
+            <img src="${img}" alt="Imagen SICAVI">
+          `;
+        });
 
-<div style="margin:30px; text-align:center;">
-  <a href="index.html" class="boton">← Regresar</a>
-</div>
+        let plataformasHTML = "";
 
-<footer>
-  <p>© 2026 IMSS</p>
-</footer>
+        data.plataformas.forEach(plataforma => {
+          plataformasHTML += `
+            <div class="card">
+              <h3>${plataforma.nombre}</h3>
+              <p>${plataforma.descripcion}</p>
+              <a href="${plataforma.link}" class="boton" target="_blank">
+                Acceder
+              </a>
+            </div>
+          `;
+        });
 
-<script src="js/menu.js"></script>
+        document.getElementById("contenido-sicavi").innerHTML = `
+          
+          <div class="titulo-sicavi">
+            <img src="${data.logo}" alt="Logo SICAVI">
+            <h1>${data.titulo}</h1>
+          </div>
 
-<script>
+          <p class="descripcion-sicavi">
+            ${data.descripcion}
+          </p>
 
-fetch('./datos/sicavi.json')
+          <div class="contenedor-imagenes">
+            ${imagenesHTML}
+          </div>
 
-.then(response => response.json())
+          <div class="plataformas">
+            ${plataformasHTML}
+          </div>
 
-.then(data => {
+        `;
+      });
 
-  /* TITULO */
-  document.getElementById("titulo-sicavi")
-    .textContent = data.titulo;
-
-  /* DESCRIPCION */
-  document.getElementById("descripcion-sicavi")
-    .textContent = data.descripcion;
-
-  /* IMAGENES */
-  const imagenes = document.getElementById("imagenes-sicavi");
-
-  data.imagenes.forEach(img => {
-
-    imagenes.innerHTML += `
-      <img src="${img}">
-    `;
-
-  });
-
-  /* PLATAFORMAS */
-  const plataformas = document.getElementById("plataformas-sicavi");
-
-  data.plataformas.forEach(plataforma => {
-
-    plataformas.innerHTML += `
-
-      <div class="plataforma">
-
-        <h2>${plataforma.nombre}</h2>
-
-        <p>${plataforma.descripcion}</p>
-
-        <a href="${plataforma.link}" class="boton">
-          Entrar
-        </a>
-
-      </div>
-
-    `;
-
-  });
-
-})
-
-.catch(error => console.log(error));
-
-</script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("activo");
+    }
+  </script>
 
 </body>
 </html>

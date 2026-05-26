@@ -208,8 +208,28 @@ body {
 /* ===== SICAVI ===== */
 .contenido-sicavi {
   padding: 30px;
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
+}
+
+.titulo-sicavi{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.titulo-sicavi img{
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.descripcion-sicavi{
+  text-align: justify;
+  line-height: 1.8;
+  margin-bottom: 30px;
 }
 
 .contenido-sicavi h1 {
@@ -481,6 +501,10 @@ footer {
 
   .card {
     width: 90%;
+  }
+
+  .titulo-sicavi{
+    flex-direction: column;
   }
 
 }
